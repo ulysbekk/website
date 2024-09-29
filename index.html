@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<meta charset=“UTF-8”>
+	<meta name=“viewpoint” content=“width=device-width, initial-scale=1.0”>
+	<title>ulysbek</title>
+
+	<style>
+		@import url(‘https://fonts.cdnfonts.com/css/vcr-osd-mono');
+		
+		body {
+			font-family: ‘VCR-OSD-MONO’, sans-serif;
+			font-size: 36px;
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			color: white;
+			display: block;
+			block-size: auto;
+			writing-mode: horizontal-tb;
+			align-times: center;
+			justify-content: center;
+			height: 75vh;
+			overflow: hidden;
+	
+		}
+
+		.image-box {
+			position: absolute;
+			top: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all 1s ease;
+
+		}
+
+		#profileImage {
+			max-width: 300px;
+			transition: all 1s ease;
+
+		.biography {
+			opacity: 0;
+			text-align: center;
+			margin-top: 150px;
+			transition: opacity 1s ease;
+			
+		}
+		
+		.biography p {
+		
+			word-wrap: break-word;
+			word-break: break-word;
+
+		}
+
+		.social-media {
+			text-align: center;
+			opacity: 0;
+			transition: opacity 1s ease;
+			margin-top: 25px;
+		}
+		.social-media a {
+			color: white;
+			text-decoration: none;
+			margin-right: 10px;
+		}
+		
+		.content-move {
+			top: 15%;
+		}
+	
+		.reveal-biography {
+			opacity: 1;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class=“image-box”>
+		<img src=“ulysbek.png” id=profileImage” alt=“[ulysbek]”>
+	</div>
+
+	<div class=“biography”>
+		<h2>About Me</h2>
+		<p>
+			Greetings! My name is Ulysbek (that’s a real name btw)<br>
+			I was born in Almaty but currently live in the States (RAHHHH)<br>
+			I made this website only for personal use<br>
+			I’m planning on improving this website more and more<br>
+			until later, I guess<br>
+		</p>
+	</div>
+	
+	<div class=“social-media”>
+		<a href=“https://www.instagram.com/ulyseuss/“ target=“_blank” style=“color: white;”>Instagram</a>
+		<a href=“https://www.tiktok.com/@ulysseuss” target=“_blank” style=“color: white;”>TikTok</a>
+	</div>
+	
+	<script>
+		setTimeout(function() {
+			document.querySelector(‘.image-box’).classList.add(‘.content-move’);
+			document.querySelector(.biography).classList.add(‘.reveal-biography’);
+			document.querySelector(‘.social-media’).classList.add(‘.reveal-biography’);
+		}, 2500);
+	</script>
+</body>
+</html>
