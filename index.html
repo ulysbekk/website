@@ -30,7 +30,7 @@
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			width: 75%
+			width: 100%
 			max-width: 100%
 			transition: all 1s ease;
 
@@ -69,6 +69,22 @@
 		.reveal-biography {
 			opacity: 1;
 		}
+
+		.shrink-image {
+			width: 100%;
+			animation: shrinkMove 2s forwards ease-in-out;
+		}
+		@keyFrames shrinkMove {
+			0% {
+				width: 100%;
+				transform: translateY(0);
+		}
+		100% {
+			width: 50%;
+			transform: translateY(-100px);
+		}
+		
+			
 		
 	</style>
 </head>
