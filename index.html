@@ -48,11 +48,14 @@
 			max-width: 300px;
 			transition: all 1s ease;
 		}
+
+		.biography {
+			text-align: center;
+			margin-top: 100px;
 		.biography span {
 			position: relative;
 			opacity: 0;
-			text-align: center;
-			margin-top: 100px;
+			display: inline-block;
 			transition: opacity 1.5s ease;
 			white-space: nowrap;
 			border-right: .15em black; 
@@ -91,7 +94,7 @@
 	
 		.reveal-biography {
 			opacity: 1;
-			animation: typing 2s steps(40, end) forwards;
+			
 		}
 
 		.shrink-image {
@@ -151,7 +154,9 @@
             				line.style.opacity = 1; // Reveal line by setting opacity
         			}, index * 1500); // Adjust the timing here as needed (1500 ms = 1.5 seconds)
     			});
-			document.querySelector('.social-media').classList.add('reveal-biography');
+			setTimeout(() => {
+				document.querySelector('.social-media').style.opacity = 1;
+			}, lines.length * 1500);
 		}, 2500);
 	</script>
 </body>
