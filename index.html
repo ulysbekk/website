@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<title>ulysbek</title>
@@ -46,6 +46,26 @@
 			width: 100%;
 			height: auto;
 			transition: all 1s ease;
+			
+		}
+
+		.information {
+			position: absolute;
+			bottom: 0;
+			width: 0%;
+			height: 2.5rem;
+			opacity: 0;
+			transition: opacity 5s ease, width 5s ease;
+			white-space: nowrap;
+			overflow: hidden;
+			color: darkgray;
+			box-sizing: border-box;
+			font-size: 15px;
+		}
+
+		.information-reveal {
+			opacity: 1;
+			width: 100%;
 		}
 
 		.biography {
@@ -83,7 +103,7 @@
 		}
 		
 		.content-move {
-			top: 10%;
+			top: 15%;
 		}
 	
 		.reveal-biography {
@@ -95,26 +115,46 @@
 			animation: shrinkMove 2s forwards ease-in-out;
 		}
 		
-		@media (max-width: 1200px) {
-    			body {
-        			font-size: 3vw; /* Slightly larger for larger screens */
-    			}
+		@media (max-width: 768px) {
+			body {
+				font-size: 20px;
+
+			}
+
+			#profileImage {
+				max-width: 70;
+			}
+		
+
+		.biography {
+			font-size: 18px;
 		}
 
-		@media (max-width: 900px) {
-    			body {
-        			font-size: 4vw; /* Adjusted for medium screens */
-    			}
+		.social-media a {
+			font-size: 15px;
 		}
+	}
+		@media (max-width: 480px) {
+			body {
+				font-size: 18px;
+			}
 
-		@media (max-width: 600px) {
-    			body {
-        			font-size: 5vw; /* Adjusted for smaller screens */
-    			}
+			#profileImage {
+				max-width: 70%;
+			}
+
+			.biography {
+				font-size: 14px;
+			}
+			.information {
+				font-size: 20px;
+			}
+			
 		}
-
+	
+		
 		.social-media a:hover {
-			color: black;
+			color: grey;
 			transform: scale(1.2);
 			text-decoration: underline;
 		}
@@ -123,6 +163,9 @@
 <body>
 	<div class="image-box">
 		<img src="ulysbek.png" id="profileImage" alt="[ulysbek]">
+	</div>
+	<div class ="information">
+		<footer>For more information contact: ulysbek@ulysbek.lol</footer>
 	</div>
 
 	<div class="biography">
@@ -145,7 +188,8 @@
 		setTimeout(function() {
 			document.querySelector('.image-box').classList.add('content-move'); 
 			document.querySelector('.biography').classList.add('reveal'); 
-			document.querySelector('.social-media').classList.add('reveal-biography'); 
+			document.querySelector('.social-media').classList.add('reveal-biography');
+			document.querySelector('.information').classList.add('information-reveal');  
 		}, 2500);
 	</script>
 </body>
