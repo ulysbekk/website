@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<title>ulysbek</title>
@@ -54,19 +54,13 @@
 			text-align: center;
 			margin-top: 150px;
 			transition: opacity 3s ease, width 3s ease; 
-			
-			max-width: 90%;
+			white-space: nowrap;
 			width: 0; 
-			overflow: hidden;
-			padding: 0 10px;
-			max-height: 0;
+			overflow: hidden; 
 		}
 		
 		.biography.reveal {
 			opacity: 1;
-			max-height: 200px;
-
-
 			width: 100%; 
 		}
 		
@@ -103,19 +97,19 @@
 		
 		@media (max-width: 1200px) {
     			body {
-        			font-size: 3vw; 
+        			font-size: 3vw; /* Slightly larger for larger screens */
     			}
 		}
 
 		@media (max-width: 900px) {
     			body {
-        			font-size: 4vw; 
+        			font-size: 4vw; /* Adjusted for medium screens */
     			}
 		}
 
 		@media (max-width: 600px) {
     			body {
-        			font-size: 5vw; 
+        			font-size: 5vw; /* Adjusted for smaller screens */
     			}
 		}
 
