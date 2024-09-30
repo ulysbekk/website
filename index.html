@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> <!-- Fix: viewport spelling -->
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<title>ulysbek</title>
@@ -50,15 +50,15 @@
 			opacity: 0;
 			text-align: center;
 			margin-top: 150px;
-			transition: opacity 3s ease, width 3s ease; /* Added width transition */
+			transition: opacity 3s ease, width 3s ease; 
 			white-space: nowrap;
 			width: 0; 
 			overflow: hidden; 
 		}
 		
-		.biography.reveal { /* Added class for revealing biography */
+		.biography.reveal {
 			opacity: 1;
-			width: 100%; /* Adjust this to the width you need */
+			width: 100%; 
 		}
 		
 		.biography p {
@@ -84,7 +84,7 @@
 		}
 	
 		.reveal-biography {
-			opacity: 1; /* This can be removed, as it's handled in the biography class */
+			opacity: 1; 
 		}
 
 		.shrink-image {
@@ -131,9 +131,9 @@
 	
 	<script>
 		setTimeout(function() {
-			document.querySelector('.image-box').classList.add('content-move'); // Remove the dot
-			document.querySelector('.biography').classList.add('reveal'); // Change this to 'reveal'
-			document.querySelector('.social-media').classList.add('reveal-biography'); // Keep it as is, but you can adjust
+			document.querySelector('.image-box').classList.add('content-move'); 
+			document.querySelector('.biography').classList.add('reveal'); 
+			document.querySelector('.social-media').classList.add('reveal-biography'); 
 		}, 2500);
 	</script>
 </body>
