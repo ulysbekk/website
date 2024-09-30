@@ -67,7 +67,7 @@
 		}
 		@keyframes typing {
 			from { width: 0; }
-			to { width: 100% }
+			to { width: 100%; }
 		}
 		.biography p {
 			word-wrap: break-word;
@@ -95,7 +95,7 @@
 	
 		.reveal-biography {
 			opacity: 1;
-			animation: typing 3s steps(40, end) forwards:
+			animation: typing 4s steps(40, end) forwards;
 		}
 
 		.shrink-image {
@@ -153,7 +153,7 @@
 			document.querySelector('.social-media').classList.add('reveal-biography');
 			setTimeout(function() {
 				document.querySelector('.biography').classList.add('reveal-biography');
-			}, 1500);
+			}, 500);
 		}, 2500);
 	</script>
 </body>
