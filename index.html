@@ -110,52 +110,9 @@
 			text-decoration: underline;
 		}
 
-		.glitch:hover {
-			animation: glitch 0.6 steps(5) infinite;
-		}
-		@keyframes glitch {
-			0% {
-				clip: rect(50px, 9999px, 62px, 0):
-				transform: skew(0.3deg);
-		}
-			20% {
-    				clip: rect(88px, 9999px, 84px, 0);
-    				transform: skew(0.3deg);
-  		}
-  			40% {
-    				clip: rect(19px, 9999px, 36px, 0);
-    				transform: skew(0.3deg);
-  		}
-  			60% {
-    				clip: rect(64px, 9999px, 79px, 0);
-    				transform: skew(0.3deg);
-  		}
-  			80% {
-    				clip: rect(78px, 9999px, 50px, 0);
-    				transform: skew(0.3deg);
-  		}
-  			100% {
-    				clip: rect(97px, 9999px, 93px, 0);
-    				transform: skew(0.3deg);
-		}
-	}
+		
 
-		@keyframes typewriter {
-					from { width: 0; }
-					to { width: 100%; }
-				}
-		.typewriter {
-			overflow: hidden;
-			border-right: 2px solid white;
-			white-space: nowrap;
-			width: 0;
-			animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
-		}
-
-		@keyframes blinkTextCursor {
-			from { border-right-color: white; }
-			to { border-right-color: transparent; }	
-		}
+		
 	</style>
 </head>
 <body>
@@ -167,7 +124,7 @@
 
 	<div class="biography">
 		<h2>About Me</h2>
-		<p class="typewriter-text">
+		<p>
 			Greetings! My name is Ulysbek (that’s a real name btw)<br>
 			I was born in Almaty but currently live in the States (RAHHHH)<br>
 			I made this website only for personal use<br>
@@ -181,18 +138,7 @@
 		<a href="https://www.tiktok.com/@ulysseuss" target="_blank"><i class="fab fa-tiktok"></i></a>
 	</div>
 	
-	<script>
-		window.addEventListener('scroll', function() {
-			var reveals = document.querySelectorAll('.scroll-reveal');
-			for (var i - 0; i < reveals.length; i++) {
-				var windowHeight = window.innerHeight;
-				var elementTop = reveals[i].getBoundingClientRect().top;
-				if (elementTop < windowHeight - 100) {
-					reveals[i].classList.add('active');
-				}
-			}
-		});
-	</script>
+	
 	<script>	
 		setTimeout(function() {
 			document.querySelector('.image-box').classList.add('content-move');
