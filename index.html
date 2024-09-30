@@ -11,7 +11,7 @@
 		
 		body {
 			font-family: 'VCR OSD Mono', sans-serif;
-			font-size: 36px;
+			font-size: 2.5vw;
 			margin: 0;
 			padding: 0;
 			background-color: black;
@@ -95,13 +95,22 @@
 			animation: shrinkMove 2s forwards ease-in-out;
 		}
 		
+		@media (max-width: 1200px) {
+    			body {
+        			font-size: 3vw; /* Slightly larger for larger screens */
+    			}
+		}
+
+		@media (max-width: 900px) {
+    			body {
+        			font-size: 4vw; /* Adjusted for medium screens */
+    			}
+		}
+
 		@media (max-width: 600px) {
-			body {
-				font-size: 20px;
-			}
-			#profileImage {
-				max-width: 150px;
-			}
+    			body {
+        			font-size: 5vw; /* Adjusted for smaller screens */
+    			}
 		}
 
 		.social-media a:hover {
