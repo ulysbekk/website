@@ -54,9 +54,11 @@
 			text-align: center;
 			margin-top: 150px;
 			transition: opacity 3s ease, width 3s ease; 
-			white-space: nowrap;
+			
+			max-width: 90%;
 			width: 0; 
-			overflow: hidden; 
+			overflow: hidden;
+			padding: 0 10px;
 		}
 		
 		.biography.reveal {
@@ -97,19 +99,19 @@
 		
 		@media (max-width: 1200px) {
     			body {
-        			font-size: 3vw; /* Slightly larger for larger screens */
+        			font-size: 3vw; 
     			}
 		}
 
 		@media (max-width: 900px) {
     			body {
-        			font-size: 4vw; /* Adjusted for medium screens */
+        			font-size: 4vw; 
     			}
 		}
 
 		@media (max-width: 600px) {
     			body {
-        			font-size: 5vw; /* Adjusted for smaller screens */
+        			font-size: 5vw; 
     			}
 		}
 
