@@ -59,10 +59,10 @@
 			margin-top: 100px;
 			transition: opacity 1.5s ease;
 			white-space: nowrap;
-			border-right: .15em solid orange; 
+			border-right: .15em black; 
 			width: 0; 
 			overflow: hidden; 
-			animation: typing 3s steps(40, end) forwards; 
+			
 		
 		}
 		@keyframes typing {
@@ -95,6 +95,7 @@
 	
 		.reveal-biography {
 			opacity: 1;
+			animation: typing 3s steps(40, end) forwards:
 		}
 
 		.shrink-image {
@@ -149,13 +150,10 @@
 		setTimeout(function() {
 			document.querySelector('.image-box').classList.add('content-move');
 			document.querySelector('.biography').classList.add('reveal-biography');
-			setTimeout(function() {
-				document.querySelector('.biography').ckassList.add('reveal-biography');
-			}, 200);
-			setTimeout(function() {
-				document.querySelector('.social-media').style.opacity = "1";
-			}, 2500);
 			document.querySelector('.social-media').classList.add('reveal-biography');
+			setTimeout(function() {
+				document.querySelector('.biography').classList.add('reveal-biography');
+			}, 1500);
 		}, 2500);
 	</script>
 </body>
