@@ -104,8 +104,35 @@
 			text-decoration: underline;
 		}
 
-		
-		
+		.glitch:hover {
+			animation: glitch 0.6 steps(5) infinite;
+		}
+		@keyframes glitch {
+			0% {
+				clip: rect(50px, 9999px, 62px, 0):
+				transform: skew(0.3deg);
+		}
+			20% {
+    				clip: rect(88px, 9999px, 84px, 0);
+    				transform: skew(0.3deg);
+  		}
+  			40% {
+    				clip: rect(19px, 9999px, 36px, 0);
+    				transform: skew(0.3deg);
+  		}
+  			60% {
+    				clip: rect(64px, 9999px, 79px, 0);
+    				transform: skew(0.3deg);
+  		}
+  			80% {
+    				clip: rect(78px, 9999px, 50px, 0);
+    				transform: skew(0.3deg);
+  		}
+  			100% {
+    				clip: rect(97px, 9999px, 93px, 0);
+    				transform: skew(0.3deg);
+		}
+	}
 	</style>
 </head>
 <body>
