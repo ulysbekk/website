@@ -53,10 +53,21 @@
 			transition: all 1s ease;
 		}
 		.biography {
+			position: relative;
 			opacity: 0;
 			text-align: center;
 			margin-top: 100px;
-			transition: opacity 1s ease;
+			transition: opacity 1.5s ease;
+			white-space: nowrap;
+			border-right: .15em solid orange; 
+			width: 0; 
+			overflow: hidden; 
+			animation: typing 3s steps(40, end) forwards; 
+		
+		}
+		@keyframes typing {
+			from { width: 0; }
+			to { width: 100% }
 		}
 		.biography p {
 			word-wrap: break-word;
@@ -64,6 +75,7 @@
 
 		}
 		.social-media {
+			position: relative;
 			text-align: center;
 			opacity: 0;
 			transition: opacity 1s ease;
@@ -78,6 +90,7 @@
 		
 		.content-move {
 			top: 10%;
+			transition: top 1.5 ease;
 		}
 	
 		.reveal-biography {
@@ -136,6 +149,12 @@
 		setTimeout(function() {
 			document.querySelector('.image-box').classList.add('content-move');
 			document.querySelector('.biography').classList.add('reveal-biography');
+			setTimeout(function() {
+				document.querySelector('.biography').ckassList.add('reveal-biography');
+			}, 200);
+			setTimeout(function() {
+				document.querySelector('.social-media').style.opacity = "1";
+			}, 2500);
 			document.querySelector('.social-media').classList.add('reveal-biography');
 		}, 2500);
 	</script>
