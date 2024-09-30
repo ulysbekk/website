@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Fix: viewport spelling -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<title>ulysbek</title>
@@ -22,22 +22,18 @@
 			justify-content: center;
 			height: 100vh;
 			overflow: hidden;
-			
-	
 		}
 		
-
 		.image-box {
 			position: absolute;
-            		top: 50%;
-            		display: flex;
+			top: 50%;
+			display: flex;
 			flex-direction: column;
-            		justify-content: center;
-            		align-items: center;
-            		transition: all 1s ease;
+			justify-content: center;
+			align-items: center;
+			transition: all 1s ease;
 			transform: translateY(-50%);
-			animation: fadeIn 2s ease-in-out;
-
+			animation: fadeIn 3s ease-in-out;
 		}
 
 		@keyframes fadeIn {
@@ -49,27 +45,25 @@
 			transition: all 1s ease;
 		}
 
-		
 		.biography {
 			position: relative;
 			opacity: 0;
 			text-align: center;
 			margin-top: 150px;
-			transition: opacity 1.5s ease;
+			transition: opacity 3s ease, width 3s ease; /* Added width transition */
 			white-space: nowrap;
 			width: 0; 
 			overflow: hidden; 
-			
+		}
 		
-		}
-		biography.reveal {
+		.biography.reveal { /* Added class for revealing biography */
 			opacity: 1;
-			width: 100%;
+			width: 100%; /* Adjust this to the width you need */
 		}
+		
 		.biography p {
 			word-wrap: break-word;
 			word-break: break-word;
-
 		}
 		.social-media {
 			position: relative;
@@ -90,14 +84,14 @@
 		}
 	
 		.reveal-biography {
-			opacity: 1;
-			
+			opacity: 1; /* This can be removed, as it's handled in the biography class */
 		}
 
 		.shrink-image {
 			width: 100%;
 			animation: shrinkMove 2s forwards ease-in-out;
 		}
+		
 		@media (max-width: 600px) {
 			body {
 				font-size: 20px;
@@ -112,15 +106,9 @@
 			transform: scale(1.2);
 			text-decoration: underline;
 		}
-
-		
-
-		
 	</style>
 </head>
 <body>
-	
-	
 	<div class="image-box">
 		<img src="ulysbek.png" id="profileImage" alt="[ulysbek]">
 	</div>
@@ -141,12 +129,11 @@
 		<a href="https://www.tiktok.com/@ulysseuss" target="_blank"><i class="fab fa-tiktok"></i></a>
 	</div>
 	
-	
-	<script>	
+	<script>
 		setTimeout(function() {
-			document.querySelector('.image-box').classList.add('content-move');
-			document.querySelector('.biography').classList.add('reveal');
-			document.querySelector('.social-media').classList.add('reveal-biography');
+			document.querySelector('.image-box').classList.add('content-move'); // Remove the dot
+			document.querySelector('.biography').classList.add('reveal'); // Change this to 'reveal'
+			document.querySelector('.social-media').classList.add('reveal-biography'); // Keep it as is, but you can adjust
 		}, 2500);
 	</script>
 </body>
