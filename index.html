@@ -49,25 +49,21 @@
 			transition: all 1s ease;
 		}
 
+		
 		.biography {
-			text-align: center;
-			margin-top: 100px;
-		.biography span {
 			position: relative;
 			opacity: 0;
-			display: inline-block;
+			text-align: center;
+			margin-top: 150px;
 			transition: opacity 1.5s ease;
 			white-space: nowrap;
-			border-right: .15em black; 
+			
 			width: 0; 
 			overflow: hidden; 
 			
 		
 		}
-		@keyframes typing {
-			from { width: 0%; }
-			to { width: 100%; }
-		}
+		
 		.biography p {
 			word-wrap: break-word;
 			word-break: break-word;
@@ -129,13 +125,13 @@
 	</div>
 
 	<div class="biography">
-		<h2><span>About Me</span></h2>
+		<h2>About Me</h2>
 		<p>
-		<span>Greetings! My name is Ulysbek (that’s a real name btw)</span><br>
-		<span>I was born in Almaty but currently live in the States (RAHHHH)</span><br>
-		<span>I made this website only for personal use</span><br>
-		<span>I’m planning on improving this website more and more</span><br>
-		<span>until later, I guess</span><br>
+		Greetings! My name is Ulysbek (that’s a real name btw)<br>
+		I was born in Almaty but currently live in the States (RAHHHH)<br>
+		I made this website only for personal use<br>
+		I’m planning on improving this website more and more<br>
+		until later, I guess<br>
 		</p>
 	</div>
 	
@@ -147,16 +143,9 @@
 	
 	<script>	
 		setTimeout(function() {
-			document.querySelector('.image-box').classList.add('content-move');
-			const lines = document.querySelectorAll('.biography span');
-    			lines.forEach((line, index) => {
-        			setTimeout(() => {
-            				line.style.opacity = 1; // Reveal line by setting opacity
-        			}, index * 1500); // Adjust the timing here as needed (1500 ms = 1.5 seconds)
-    			});
-			setTimeout(() => {
-				document.querySelector('.social-media').style.opacity = 1;
-			}, lines.length * 1500);
+			document.querySelector(‘.image-box’).classList.add(‘.content-move’);
+			document.querySelector(.biography).classList.add(‘.reveal-biography’);
+			document.querySelector(‘.social-media’).classList.add(‘.reveal-biography’);
 		}, 2500);
 	</script>
 </body>
