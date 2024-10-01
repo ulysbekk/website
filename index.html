@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<link rel="shortcut icon" type="image/jpg" href="favicon.jpg"/>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<title>ulysbek</title>
 	<link rel="shortcut icon" href="/images/favicon.ico">
+
 	<style>
         	@import url('https://fonts.cdnfonts.com/css/vcr-osd-mono');
 		
@@ -25,7 +26,7 @@
 			overflow: hidden;
 			text-align: center;
 		}
-		
+		 
 		.image-box {
 			position: absolute;
 			top: 50%;
@@ -49,6 +50,70 @@
 			transition: all 1s ease;
 			
 		}
+		.scanlines {
+    		overflow: hidden;
+    		position: relative;
+		}
+		.scanlines:before,
+		.scanlines:after {
+    		display: block;
+    		pointer-events: none;
+    		content: " ";
+    		position: absolute;
+		}
+		.scanlines:before {
+    		width: 100%;
+    		height: 2px;
+    		z-index: 2147483649;
+    		background: rgba(0, 0, 0, 0.3);
+    		opacity: 0.5;
+    		animation: scanline 6s linear infinite;
+		}
+		.scanlines:after {
+    		top: 0;
+    		right: 0;
+    		bottom: 0;
+    		left: 0;
+    		z-index: 2147483648;
+    		background: linear-gradient(
+        	to bottom,
+        	transparent 45%,
+        	rgba(0, 0, 0, 0.3) 50%
+    		);
+    		background-size: 100% 4px;
+    		animation: scanlines 1s steps(60) infinite;
+		}
+
+
+		@keyframes scanline {
+    		0% {
+        		transform: translate3d(0, 200000%, 0);
+    		}
+		}
+		@keyframes scanlines {
+    		0% {
+        		background-position: 0 50%;
+    		}
+		}
+		div {
+			margin: 0;
+			padding: 0;
+		}
+		div.scanlines {
+			position: absolute;
+		}
+		div .jpg {
+			width: 100vw;
+			height: 100vh;
+			border: none;
+		}
+		.jpg {
+			
+		}
+		body {
+			position: relative;
+			background: #1b1b1b;
+		}
 
 		.information {
 			position: absolute;
@@ -67,6 +132,7 @@
 		.information-reveal {
 			opacity: 1;
 			width: 100%;
+			transition: opacity 5s ease, width 5s ease;
 		}
 
 		.biography {
@@ -164,11 +230,19 @@
 <body>
 	<div class="image-box">
 		<img src="ulysbek.png" id="profileImage" alt="[ulysbek]">
+		<div class="crt scanlines"></div>
 	</div>
 	<div class ="information">
-		<footer>For more information contact: ulysbek@ulysbek.lol (unavailable yet)</footer>
+		<p>
+			For questions, contact:
+			<a href="mailto:ulysbek@ulysbek.lol" style="color: gray; text-decoration: underline;">
+				ulysbek@ulysbek.lol</a>
+			
+		</p> 
 	</div>
-
+	<div class="scanlines">
+		<div class="jpg"></div>
+	</div>
 	<div class="biography">
 		<h2>About Me</h2>
 		<p>
