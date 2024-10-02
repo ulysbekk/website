@@ -67,7 +67,7 @@
     		z-index: 1;
     		background: rgba(0, 0, 0, 0.3);
     		opacity: 0.5;
-    		animation: scanline 6s linear infinite;
+    		animation: scanline 1s linear infinite;
 		}
 		.scanlines:after {
     		top: 0;
@@ -87,13 +87,19 @@
 
 		@keyframes scanline {
     		0% {
-        		transform: translate3d(0, 200000%, 0);
+        		transform: translate3d(0, 100000%, 0);
     		}
+		100% {
+			transform: translate3d(0, 0, 0);
+		}
 		}
 		@keyframes scanlines {
     		0% {
         		background-position: 0 50%;
     		}
+		100% {
+			background-position: 0 0;
+		}
 		}
 		div {
 			margin: 0;
