@@ -10,6 +10,10 @@
 
 	<style>
         	@import url('https://fonts.cdnfonts.com/css/vcr-osd-mono');
+		html {
+			scroll-behavior: smooth;
+		}
+		
 		
 		body {
 			font-family: 'VCR OSD Mono', sans-serif;
@@ -25,6 +29,7 @@
 			height: 100vh;
 			overflow: hidden;
 			text-align: center;
+			
 		}
 		 
 		.image-box {
@@ -64,17 +69,19 @@
 		.scanlines:before {
     		width: 100%;
     		height: 2px;
-    		z-index: 1;
+    		z-index: 2147483649;
     		background: rgba(0, 0, 0, 0.3);
     		opacity: 0.5;
-    		animation: scanline 4s linear infinite;
+    		animation: scanline 6s linear infinite;
 		}
+
+
 		.scanlines:after {
     		top: 0;
     		right: 0;
     		bottom: 0;
     		left: 0;
-    		z-index: 1;
+    		z-index: 2147483648;
     		background: linear-gradient(
         	to bottom,
         	transparent 45%,
@@ -89,17 +96,11 @@
     		0% {
         		transform: translate3d(0, 100000%, 0);
     		}
-		100% {
-			transform: translate3d(0, 0, 0);
-		}
 		}
 		@keyframes scanlines {
     		0% {
         		background-position: 0 50%;
     		}
-		100% {
-			background-position: 0 0;
-		}
 		}
 		div {
 			margin: 0;
@@ -114,7 +115,7 @@
 			border: none;
 		}
 		.jpg {
-			
+			content: " "
 		}
 		body {
 			position: relative;
@@ -125,7 +126,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 0%;
-			height: 4rem;
+			height: 2.5rem;
 			opacity: 0;
 			transition: opacity 5s ease, width 5s ease;
 			white-space: nowrap;
@@ -133,7 +134,6 @@
 			color: darkgray;
 			box-sizing: border-box;
 			font-size: 13px;
-			z-index: 2;
 		}
 
 		.information-reveal {
@@ -151,9 +151,21 @@
 			white-space: nowrap;
 			width: 0; 
 			overflow: hidden; 
-		
+			animation: falter 2s infinite;
 		}
+
 		
+		
+		@keyframes falter {
+			0% { opacity: 1; }
+			20% { opacity: 0.8; }
+			40% { opacity: 0.9; }
+			60% { opacity: 1; }
+			80% { opacity: 0.7; }
+			100% { opacity: 1;}
+
+		}
+
 		.biography.reveal {
 			opacity: 1;
 			width: 100%; 
@@ -162,7 +174,9 @@
 		.biography p {
 			word-wrap: break-word;
 			word-break: break-word;
+			
 		}
+		
 		.social-media {
 			position: relative;
 			text-align: center;
@@ -232,19 +246,72 @@
 			color: grey;
 			transform: scale(1.2);
 			text-decoration: underline;
+			
 		}
+		@keyframes flicker {
+			0% { opacity: 1; }
+			10% { opacity: 0; }
+			20% { opacity: 1; }
+			30% { opacity: 0.8; }
+			40% { opacity: 1; }
+			50% { opacity: 0.4; }
+			60% { opacity: 1; }
+			70% { opacity: 0.2; }
+			80% { opacity: 1; }
+			90% { opacity: 0.6; }
+			100% { opacity: 1; }
+			}
+
+			.flicker {
+			animation: flicker 6s infinite;
+			}
+
+			@keyframes blur {
+  				0%, 40%, 57%, 100% { 
+    				filter: blur(0); 
+    				transform: scale(1); 
+  			}
+  				50% { 
+    				filter: blur(2px); 
+    				transform: scale(1.05); 
+  			}
+		}
+		
+
+.effect-blur {
+  	animation: blur 20s infinite ease-in-out;
+}
+
+.crt:before {
+   width: 100%;
+   height: 1px;
+   background: rgba(255, 255, 255, 0.1);
+   top: 50%;
+   opacity: 0.3;
+   animation: jitter 0.05s infinite;
+}
+
+@keyframes jitter {
+   0% { transform: translateY(0); }
+   50% { transform: translateY(-2px); }
+   100% { transform: translateY(0); }
+}
+		
+			
 	</style>
 </head>
 <body>
+
+
 	<div class="image-box">
-		<img src="ulysbek.png" id="profileImage" alt="[ulysbek]">
+		<img src="ulysbek.png" class="effect-blur" id="profileImage" alt="[ulysbek]">
 		<div class="crt scanlines"></div>
 	</div>
 	<div class ="information">
-		<h3>Contact me</h3>
-		<a href="mailto:ulysbek@ulysbek.lol" style="color: gray; text-decoration: underline;">ulysbek@ulysbek.lol</a>
-		 or 
-		<a href="https://t.me/ulyseuss" target="_blank" style="color: gray; text-decoration: underline;">Telegram</a>
+		<h3>Contact me</h3> 
+		<a href="mailto:ulysbek@ulysbek.lol" class="flicker" style="color: gray; text-decoration: underline;">ulysbek@ulysbek.lol</a>
+		 |
+		<a href="https://t.me/ulyseuss" class="flicker" style="color: gray; text-decoration: underline;">Telegram</a>
 	</div>
 	<div class="scanlines">
 		<div class="jpg"></div>
@@ -256,9 +323,11 @@
 		I was born in Almaty but currently live in the States<br>
 		I made this website only for personal use<br>
 		I’m planning on improving this website more and more<br>
-		...see y'all later, I guess<br>
+		 
+		see y'all later, i guess...<br>
 		</p>
 	</div>
+	
 	
 	<div class="social-media">
 		<a href="https://www.instagram.com/ulyseuss/" target="_blank"><i class="fab fa-instagram"></i></a>
