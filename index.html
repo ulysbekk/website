@@ -302,7 +302,7 @@
 </head>
 <body>
 	 <audio id="backgroundSound" autoplay loop>
-    	<source src="vhs-noise.mp3" type="audio/mp3">
+    		<source src="vhs-noise.mp3" type="audio/mp3">
 	 </audio>
 
 
@@ -338,6 +338,13 @@
 	</div>
 	
 	<script>
+		const audio = document.getElementById('backgroundSound');
+		console.log(audio);  
+		audio.play().then(() => {
+    			console.log('Audio is playing');
+		}).catch(error => {
+    			console.log('Audio error:', error);  
+		});
 		setTimeout(function() {
 			document.querySelector('.image-box').classList.add('content-move'); 
 			document.querySelector('.biography').classList.add('reveal'); 
