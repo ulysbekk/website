@@ -310,17 +310,19 @@
 	
 	
 	<div class="social-media">
-		<a href="https://www.instagram.com/ulysbek.lol/" target="_blank"><i class="fab fa-instagram"></i></a>
-		<a href="https://www.tiktok.com/@ulysbek.lol" target="_blank"><i class="fab fa-tiktok"></i></a>
+		<a href="https://www.instagram.com/ulysbek.lol/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+		<a href="https://www.tiktok.com/@ulysbek.lol" target="_blank" rel="noopener noreferrer><i class="fab fa-tiktok"></i></a>
 	</div>
 	
 	<script>
-		setTimeout(function() {
-			document.querySelector('.image-box').classList.add('content-move'); 
-			document.querySelector('.biography').classList.add('reveal'); 
-			document.querySelector('.social-media').classList.add('reveal-biography');
-			document.querySelector('.information').classList.add('information-reveal');
-		}, 2500);
+		window.onload = function() {
+			setTimeout(function() {
+				document.querySelector('.image-box').classList.add('content-move');
+				document.querySelector('.biography').classList.add('reveal');
+				document.querySelector('.social-media').classList.add('reveal-biography');
+				document.querySelector('.information').classList.add('information-reveal');
+			}, 2500);
+		};
 	</script>
 </body>
 </html>
