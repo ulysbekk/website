@@ -24,6 +24,7 @@
 			height: 100vh;
 			overflow: hidden;
 			text-align: center;
+            overflow-y: auto;
 			
 		}
 		 
@@ -119,7 +120,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 0%;
-			height: 4rem;
+			height: auto;
 			opacity: 0;
 			transition: opacity 5s, width 5s;
 			white-space: nowrap;
@@ -142,7 +143,7 @@
 			opacity: 0;
 			text-align: center;
 			margin-top: 110px;
-			transition: opacity 4s, width 5s; 
+			transition: opacity 10s ease-in, width 1s ease-in; 
 			white-space: nowrap;
 			width: 0; 
 			overflow: hidden; 
@@ -264,7 +265,7 @@
     				transform: scale(1); 
   			}
   				50% { 
-    				filter: blur(2px); 
+    				filter: blur(10px); 
     				transform: scale(1.05); 
   			}
 		}
@@ -288,12 +289,12 @@
 
 		p {
 		flex: 1;
-		line-height: .75;
+		line-height: 1;
 		margin: auto;
 		color: white;
 		text-align: center;
 		transform: scaleX(var(--scale, 1));
-		animation: glitch-p 11s infinite alternate;
+		animation: glitch-p 10s infinite alternate;
 		
 		&::before,
 		&::after {
@@ -316,8 +317,8 @@
 
 			filter: drop-shadow(0 0 transparent); 
 			
-			text-shadow: calc(var(--left) * -3em) 0 .02em lime, 
-						calc(var(--left) * -6em) 0 .02em #ff00e1;
+			text-shadow: calc(var(--left) * -3em) 0.02em lime, 
+						calc(var(--left) * -6em) 0.02em #ff00e1;
 			
 			background-color: var(--bg);
 			clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
@@ -327,7 +328,7 @@
 			animation: glitch-b 1.7s infinite alternate-reverse;
 		}
 		&::after {
-			animation: glitch-a 3.1s infinite alternate;
+			animation: glitch-a 1s infinite alternate;
 		}
 		}
 
@@ -415,8 +416,12 @@
 
 
 	<div class="image-box">
+        
 		<img src="ulysbek.png" class="effect-blur" id="profileImage" alt="[ulysbek]">
-		<div class="crt scanlines"></div>
+
+		<div class="crt scanlines">
+    
+        </div>
 	</div>
 	<div class ="information">
 		<h3>Contact me</h3> 
@@ -431,12 +436,12 @@
 		<p data-text="About Me">About Me</p>
 		<p data-text="Hi, my name's ulysbek
 			im from kazakhstan (not affiliated w/ borat)
-			i made this website for fun
-			i may or not abandon it in the near future
+			check out my links below
+			you can contact me via email or telegram
 			see y'all later, i guess...">Hi, my name's ulysbek<br>
 			im from kazakhstan (not affiliated w/ borat)<br>
-			i made this website for fun<br>
-			i may or not abandon it in the near future<br>
+			check out my links below<br>
+			you can contact me via email or telegram<br>
 			 
 			see y'all later, i guess...</p>
 	</div>
@@ -445,6 +450,7 @@
 	<div class="social-media">
 		<a href="https://www.instagram.com/ulysbek.lol/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
 		<a href="https://www.tiktok.com/@ulysbek.lol" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        <a href="https://github.com/ulysbekk/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
 	</div>
 	
 	<script>
