@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html> 
+<head> 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link rel="icon" type="image/png" href="favicon.png"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-	<title>ulysbek</title>
-
-	<style>
+	<title>ulysbek</title> 
+ 
+	<style> 
         	@import url('https://fonts.cdnfonts.com/css/vcr-osd-mono');
-		
+		 
 		body {
 			font-family: 'VCR OSD Mono', sans-serif;
 			font-size: 2.5vw;
@@ -25,8 +25,8 @@
 			overflow: hidden;
 			text-align: center;
             overflow-y: auto;
-			
-		}
+			 
+		} 
 		 
 		.image-box {
 			position: absolute;
@@ -38,30 +38,31 @@
 			transition: all 1s ease;
 			transform: translateY(-50%);
 			animation: fadeIn 3s ease-in-out;
-		}
-
+			z-index: 8;
+		} 
+ 
 		@keyframes fadeIn {
 			0% { opacity: 0; }
 			100% { opacity: 1; }
-		}
+		} 
 		#profileImage {
 			max-width: 300px;
 			width: 100%;
 			height: auto;
 			transition: all 1s ease;
-			
-		}
+			 
+		} 
 		.scanlines {
     		overflow: hidden;
     		position: relative;
-		}
-		.scanlines:before,
+		} 
+		.scanlines:before, 
 		.scanlines:after {
     		display: block;
     		pointer-events: none;
     		content: " ";
-    		position: absolute;
-		}
+    	     position: absolute;
+		} 
 		.scanlines:before {
     		width: 100%;
     		height: 2px;
@@ -69,10 +70,10 @@
     		background: rgba(0, 0, 0, 0.3);
     		opacity: 0.5;
     		animation: scanline 6s linear infinite;
-		}
-
-
-		.scanlines:after {
+	 	}
+ 
+ 
+	 	.scanlines:after {
     		top: 0;
     		right: 0;
     		bottom: 0;
@@ -85,9 +86,9 @@
     		);
     		background-size: 100% 4px;
     		animation: scanlines 1s steps(60) infinite;
-		}
-
-
+		} 
+ 
+ 
 		@keyframes scanline {
     		0% {
         		transform: translate3d(0, 100000%, 0);
@@ -106,8 +107,8 @@
 			position: absolute;
 		}
 		div .jpg {
-			width: 100vw;
-			height: 100vh;
+			width: 10000px;
+			height: 1000px;
 			border: none;
 		}
 		
@@ -120,7 +121,7 @@
 			position: absolute;
 			bottom: 0;
 			width: 0%;
-			height: 5rem;
+			height: 6rem;
 			opacity: 0;
 			transition: opacity 5s, width 5s;
 			white-space: nowrap;
@@ -128,7 +129,7 @@
 			color: darkgray;
 			box-sizing: border-box;
 			font-size: 15px;
-			z-index: 9;
+			z-index: 8;
 		}
 
 		.information-reveal {
@@ -139,15 +140,16 @@
 
 		.biography {
 			position: relative;
-			font-size: 2vw;
+		
 			opacity: 0;
 			text-align: center;
 			margin-top: 110px;
-			transition: opacity 10s ease-in, width 1s ease-in; 
+			transition: opacity 2s ease-in, width 0.3s ease-in-out; 
 			white-space: nowrap;
 			width: 0; 
 			overflow: hidden; 
 			animation: falter 2s infinite;
+            font-size: 2.1vw;
 		}
 
 		
@@ -234,8 +236,8 @@
 			}
 			
 		}
-	
-		
+	  
+		 
 		.social-media a:hover {
 			color: grey;
 			transform: scale(1.2);
@@ -265,7 +267,7 @@
     				transform: scale(1); 
   			}
   				50% { 
-    				filter: blur(10px); 
+    				filter: blur(2px); 
     				transform: scale(1.05); 
   			}
 		}
@@ -318,17 +320,17 @@
 			filter: drop-shadow(0 0 transparent); 
 			
 			text-shadow: calc(var(--left) * -3em) 0.02em lime, 
-						calc(var(--left) * -6em) 0.02em #ff00e1;
+						 calc(var(--left) * -6em) 0.02em #ff00e1;
 			
 			background-color: var(--bg);
 			clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
 		} 
 		
 		&::before {
-			animation: glitch-b 1.7s infinite alternate-reverse;
+			animation: glitch-b 2s infinite alternate-reverse;
 		}
 		&::after {
-			animation: glitch-a 1s infinite alternate;
+			animation: glitch-a 2s infinite alternate;
 		}
 		}
 
@@ -349,12 +351,12 @@
 		--v-height: 15%; 
 		}
 		20% {
-			--left: .005;
+			--left: 0.5;
 		}
 		40% {
 			--left: .01;
 			--v-height: 20%;
-			--top: 3;
+			--top: 2;
 		}
 		60% {
 			--left: .03;
@@ -407,32 +409,86 @@
 		}
 		}
 
+        h3.falter {
+            animation: falter 2s infinite;
+        }
+
+        .calendar {
+            position: fixed;
+            right: 30px;
+            top: 90px;
+            transition: opacity 1s ease-in, width 1.2s ease-in;
+            animation: effect-blur 20s infinite;
+            opacity: 0;
+        }
+        
+        aside {
+            font-size: 2.5vh;
+        }
+        
+
+        .calendar.reveal {
+           
+            opacity: 1;
+
+        }
+
+        .calendar.effect {
+            animation: blur 20s infinite ease-in-out;
+        }
+
+		.mouse {
+			color: white;
+			
+		}
+
+		.mouse:hover {
+			color: gray;
+			scale: 1.02;
+
+		}
+	
+		
+		
+
 
 		
-			
 	</style>
 </head>
 <body>
 
-
+    <aside class="calendar">
+        <ul >
+            <li id="clock"></li>
+            <li id="date"></li>
+            <div class="effect"></div>
+        </ul>
+    </aside>
 	<div class="image-box">
         
-		<img src="ulysbek.png" class="effect-blur" id="profileImage" alt="[ulysbek]">
+		
+		<a href="https://www.google.com/search?q=sewerslvt&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" style="color: gray; text-decoration: none;">
+			<img src="ulysbek.png" class="mouse" id="profileImage" alt="[ulysbek]">
+		</a>
 
 		<div class="crt scanlines">
-    
+            
         </div>
 	</div>
 	<div class ="information">
-		<h3>Contact me</h3> 
-		<a href="mailto:ulysbek@ulysbek.lol" class="flicker" style="color: gray; text-decoration: underline;">Email</a>
-		 |
-		<a href="https://t.me/betterthanm0rphine" class="flicker" style="color: gray; text-decoration: underline;">Telegram</a>
+		<h3 class="falter">Contact me</h3> 
+		<a href="mailto:ulysbek@ulysbek.lol" class="flicker" style="color: gray; text-decoration: underline;">
+            <p class="flicker", data-text="Email">Email<br></p>
+        </a>
+		 
+		<a href="https://t.me/eccision" class="flicker" style="color: gray; text-decoration: underline;">
+            <p class="flicker", data-text="Telegram">Telegram<br></p>
+        </a>
 	</div>
 	<div class="scanlines">
 		<div class="jpg"></div>
 	</div>
-	<div class="biography">
+	<div class="biography effect-blur">
 		<p data-text="About Me">About Me</p>
 		<p data-text="Hi, my name's ulysbek
 			im from kazakhstan (not affiliated w/ borat)
@@ -448,9 +504,9 @@
 	
 	
 	<div class="social-media">
-		<a href="https://www.instagram.com/ulysbek.lol/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-		<a href="https://www.tiktok.com/@ulysbek.lol" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-        <a href="https://github.com/ulysbekk/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+		<a href="https://www.instagram.com/ulysbek.lol/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram effect-blur"></i></a>
+		<a href="https://www.tiktok.com/@ulysbek.lol" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok effect-blur"></i></a>
+        <a href="https://github.com/ulysbekk/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github effect-blur"></i></a>
 	</div>
 	
 	<script>
@@ -460,8 +516,51 @@
 				document.querySelector('.biography').classList.add('reveal');
 				document.querySelector('.social-media').classList.add('reveal-biography');
 				document.querySelector('.information').classList.add('information-reveal');
+                document.querySelector('.calendar').classList.add('reveal');
 			}, 1700);
 		};
+
+        function clock() {
+            var today = new Date();
+            var hours = today.getHours();
+            var minutes = today.getMinutes();
+            var seconds = today.getSeconds();
+            var month = today.getMonth();
+            var day = today.getDate();
+            var year = today.getFullYear();
+            var monthNames = ["JAN.", "FEB.", "MAR.", "APR.", "MAY.", "JUN.", "JUL.", "AUG.", "SEP.", "OCT.", "NOV.", "DEC."];
+           
+        if (hours >= 12) {
+            meridiem = "PM";
+        }
+        else {
+            meridiem = "AM";
+        }
+   
+        if (hours > 12) {
+            hours = hours - 12;
+        }
+        else if (hours === 0) {
+            hours = 12;
+        }
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        else {
+            minutes = minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        else {
+            seconds = seconds;
+        }
+            document.getElementById("clock").innerHTML = (meridiem  + " " + hours + ":" + minutes + ":" + seconds);
+            document.getElementById("date").innerHTML = (monthNames[month] + " " + day + " " + year);
+        }
+        setInterval('clock()', 1000);
+
+		
 	</script>
 </body>
 </html>
